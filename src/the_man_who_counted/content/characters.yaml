@@ -1,0 +1,12 @@
+# The cast of the story. Each speaker referenced from a chapter's `say:` beat
+# should appear here so its name plate shows the right name and colour.
+characters:
+  beremiz:
+    name: "Beremiz Samir"
+    color: "#D4AF37"
+  traveller:
+    name: "The Traveller"
+    color: "#9ecbff"
+  sultan:
+    name: "The Sultan of Baghdad"
+    color: "#c792ea"

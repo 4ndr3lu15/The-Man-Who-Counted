@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Meson / Flatpak
+_build/
+build/
+builddir/
+.flatpak-builder/
+repo/
+
+# Test / tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

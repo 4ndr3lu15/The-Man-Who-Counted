@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=The Man Who Counted
+Comment=A visual novel inspired by Malba Tahan's book
+Exec=the-man-who-counted
+Icon=io.github._4ndr3lu15.TheManWhoCounted
+Terminal=false
+Type=Application
+Categories=Game;LogicGame;
+Keywords=puzzle;riddle;math;visual novel;malba tahan;beremiz;
+StartupNotify=true
+DBusActivatable=false

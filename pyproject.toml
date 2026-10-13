@@ -1,0 +1,5 @@
+# The app is built and installed with Meson (see meson.build); this file only
+# configures the test runner for the pure-Python modules.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

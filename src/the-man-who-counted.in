@@ -1,0 +1,10 @@
+#!@PYTHON@
+"""Launcher installed by meson: puts the package on the path and starts the app."""
+
+import sys
+
+sys.path.insert(1, "@pkgdatadir@")
+
+from the_man_who_counted.main import main  # noqa: E402
+
+sys.exit(main())

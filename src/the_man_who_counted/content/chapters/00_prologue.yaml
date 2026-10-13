@@ -1,0 +1,71 @@
+id: prologue
+title: "Prologue — On the Road to Baghdad"
+
+# The opening of the journey, inspired by Malba Tahan's "The Man Who Counted".
+# The prose is original: it retells the meeting in our own words. The traveller
+# meets Beremiz Samir; the player then stands in Beremiz's sandals for the first
+# trial of counting.
+
+beats:
+  - art: desert
+
+  - narration: "The sun was sinking red into the sands of Arabia as I rode, weary, on the long road to Baghdad."
+  - narration: "By the roadside sat a young man in travel-worn clothes, his lips moving in silence — as though he were counting the very grains of the dunes."
+
+  - say: beremiz
+    text: "…One million, four hundred and twelve thousand, three hundred and twenty-one."
+
+  - narration: "I reined in my horse. “Friend,” I asked, “what is it that you count so carefully out here, alone?”"
+
+  - say: beremiz
+    text: "Everything, traveller. The leaves on a branch, the birds in a flock, the words in a quarrel. Numbers are the language in which the world was written."
+
+  - say: beremiz
+    text: "They call me Beremiz Samir. Some call me the Man Who Counted."
+
+  - choice: "The light is fading. What do you do?"
+    options:
+      - text: "Invite him to travel with you to Baghdad"
+        goto: companion
+      - text: "You are tired, and nearly ride on"
+        goto: skeptic
+
+  - label: companion
+  - say: traveller
+    text: "Then ride with me to Baghdad, Beremiz. A road shared is a road halved."
+  - narration: "He smiled, and climbed up behind me. And so the Man Who Counted became my companion."
+  - goto: trial
+
+  - label: skeptic
+  - narration: "I nearly rode on — but curiosity is a stubborn mount, and it would not let me leave."
+  - say: traveller
+    text: "Prove it, then. Show me this gift of yours."
+
+  - label: trial
+  - art: caravan
+  - say: beremiz
+    text: "Very well. A merchant in the last caravan left a riddle, and a purse of gold to whoever solves it."
+  - say: beremiz
+    text: "Among eight balls of gold, one is heavier than the rest by a hair. With a balance, and only two weighings, name it."
+  - narration: "He gestured to the scale, and to the gold. “The counting,” he said, “I leave to you.”"
+
+  - puzzle: balance
+    on_win: praised
+    on_lose: doubted
+
+  - label: praised
+  - art: baghdad
+  - say: beremiz
+    text: "Two weighings, and the truth laid bare. You reason like a true man who counts."
+  - narration: "The gates of Baghdad rose golden before us. Whatever this city held, we would meet it by number and by wit."
+  - goto: finish
+
+  - label: doubted
+  - art: baghdad
+  - say: beremiz
+    text: "The heavy one slipped past you this time. Do not despair — every counter miscounts before he counts true."
+  - narration: "Still, Baghdad welcomed us through its golden gates, and there would be trials enough to learn upon."
+  - goto: finish
+
+  - label: finish
+  - end: "— End of the prologue. More chapters await. —"

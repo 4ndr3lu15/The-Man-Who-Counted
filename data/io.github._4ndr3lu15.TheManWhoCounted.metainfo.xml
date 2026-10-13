@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github._4ndr3lu15.TheManWhoCounted</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>The Man Who Counted</name>
+  <summary>Solve the riddles of Beremiz Samir</summary>
+  <developer id="io.github._4ndr3lu15">
+    <name>André Luís</name>
+  </developer>
+  <description>
+    <p>
+      A visual novel inspired by Malba Tahan's book “The Man Who Counted”
+      (O Homem que Calculava). The story is narrated, and as it unfolds you stand
+      in the sandals of Beremiz Samir, the man who counted. When Beremiz meets a
+      riddle, so do you — and solving it carries the story forward.
+    </p>
+    <p>
+      This is a pre-alpha build: an early, incomplete look at the game.
+      It contains:
+    </p>
+    <ul>
+      <li>A narrated prologue on the road to Baghdad, with painted, cross-fading scenes</li>
+      <li>Typewriter dialogue and branching choices</li>
+      <li>The trial of the eight gold balls: find the one heavier ball with a balance, in two weighings</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github._4ndr3lu15.TheManWhoCounted.desktop</launchable>
+  <url type="homepage">https://github.com/4ndr3lu15/The-Man-Who-Counted</url>
+  <url type="bugtracker">https://github.com/4ndr3lu15/The-Man-Who-Counted/issues</url>
+  <content_rating type="oars-1.1"/>
+  <branding>
+    <color type="primary" scheme_preference="light">#f3e5ab</color>
+    <color type="primary" scheme_preference="dark">#0b1320</color>
+  </branding>
+  <requires>
+    <display_length compare="ge">560</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <categories>
+    <category>Game</category>
+    <category>LogicGame</category>
+  </categories>
+  <releases>
+    <release version="pre-alpha.1" type="development" date="2026-10-12">
+      <description>
+        <p>Pre-alpha build 1: the prologue and the balance puzzle as a native GNOME app.</p>
+      </description>
+    </release>
+  </releases>
+</component>

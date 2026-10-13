@@ -1,0 +1,159 @@
+/* The Man Who Counted — the desert-night palette.
+ * Gold #D4AF37 is the signature colour; navy #0b1320 background, #101c30 panels. */
+
+:root {
+  --accent-bg-color: #D4AF37;
+  --accent-fg-color: #0b1320;
+  --accent-color: #e2c25a;
+  --window-bg-color: #0b1320;
+  --window-fg-color: #E8E8E8;
+  --view-bg-color: #0b1320;
+  --view-fg-color: #E8E8E8;
+  --headerbar-bg-color: #0b1320;
+  --headerbar-fg-color: #E8E8E8;
+  --card-bg-color: #101c30;
+  --dialog-bg-color: #101c30;
+  --popover-bg-color: #101c30;
+}
+
+/* -- Title page ---------------------------------------------------------- */
+.title-banner {
+  font-family: serif;
+  font-size: 34pt;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #D4AF37;
+  text-shadow: 0 0 24px alpha(#D4AF37, 0.35);
+}
+
+.title-sub {
+  font-family: serif;
+  font-style: italic;
+  font-size: 15pt;
+  color: #F3E5AB;
+}
+
+.tagline {
+  color: #9ecbff;
+}
+
+.build-label {
+  color: #5b6a83;
+}
+
+.menu-button {
+  min-width: 280px;
+  padding: 10px 24px;
+}
+
+/* -- The stage ----------------------------------------------------------- */
+.dialogue {
+  background-color: alpha(#101c30, 0.9);
+  border-top: 3px solid #D4AF37;
+  border-radius: 14px;
+  padding: 18px 28px 14px 28px;
+  box-shadow: 0 10px 30px alpha(black, 0.5);
+}
+
+.nameplate {
+  font-weight: bold;
+  font-size: 13pt;
+  letter-spacing: 0.04em;
+}
+
+.dialogue-line {
+  font-family: serif;
+  font-size: 16pt;
+  color: #E8E8E8;
+}
+
+.hint {
+  color: #5b6a83;
+  font-style: italic;
+  font-size: 10pt;
+}
+
+button.choice {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: alpha(#D4AF37, 0.08);
+  border: 1px solid alpha(#D4AF37, 0.35);
+  color: #F3E5AB;
+  font-family: serif;
+  font-size: 13pt;
+}
+
+button.choice:hover,
+button.choice:focus-visible {
+  background-color: alpha(#D4AF37, 0.2);
+  border-color: #D4AF37;
+}
+
+/* -- The balance puzzle -------------------------------------------------- */
+.puzzle {
+  background: radial-gradient(ellipse at 50% 35%, #16233b, #0b1320 70%);
+}
+
+.tally {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background-color: alpha(#D4AF37, 0.12);
+  color: #D4AF37;
+  font-weight: bold;
+  font-size: 10pt;
+  font-feature-settings: "tnum";
+}
+
+.puzzle-message {
+  color: #F3E5AB;
+  font-family: serif;
+  font-size: 13pt;
+}
+
+.puzzle-message.error {
+  color: #e57373;
+}
+
+button.ball {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  background-image: radial-gradient(circle at 35% 30%, #fff3c4, #D4AF37 45%, #7a5c12);
+  color: #3a2a05;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 14pt;
+  box-shadow: 0 3px 6px alpha(black, 0.4);
+  transition: all 150ms ease-out;
+}
+
+button.ball:hover {
+  box-shadow: 0 3px 6px alpha(black, 0.4), 0 0 12px alpha(#D4AF37, 0.6);
+}
+
+button.ball.selected {
+  box-shadow: 0 0 0 3px #F3E5AB, 0 0 18px #D4AF37;
+}
+
+button.ball.on-pan {
+  opacity: 0.3;
+}
+
+@keyframes guess-pulse {
+  from { box-shadow: 0 0 0 0 alpha(#F3E5AB, 0.0), 0 3px 6px alpha(black, 0.4); }
+  to   { box-shadow: 0 0 0 4px alpha(#F3E5AB, 0.6), 0 0 18px #D4AF37; }
+}
+
+button.ball.guessable {
+  animation: guess-pulse 900ms ease-in-out infinite alternate;
+}
+
+button.identify {
+  color: #F3E5AB;
+  background-color: alpha(#c792ea, 0.22);
+}
+
+button.identify:hover {
+  background-color: alpha(#c792ea, 0.34);
+}
